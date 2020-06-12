@@ -1,0 +1,9 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r1 Build 19110651"
+	.compiler_invocation	"ctc  C:/Users/zw/Desktop/Lwip/.metadata/.plugins/org.eclipse.cdt.managedbuilder.core/spec.c"
+	.compiler_name		"ctc"
+	;source	'C:/Users/zw/Desktop/Lwip/.metadata/.plugins/org.eclipse.cdt.managedbuilder.core/spec.c'
+
+	
+	
+	; Module end
