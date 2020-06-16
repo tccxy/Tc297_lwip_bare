@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 ip_frag.o :	../AppSrc/LwIP/lwip-1.4.1/src/core/ipv4/ip_frag.c
 ../AppSrc/LwIP/lwip-1.4.1/src/core/ipv4/ip_frag.c :
 ip_frag.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ ip_frag.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 ip_frag.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-ip_frag.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+ip_frag.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 ip_frag.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 ip_frag.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

@@ -47,7 +47,7 @@
  * something that better describes your network interface.
  */
 
-#include "wPub.h"
+#include "hDrv.h"
 #include "lwip/opt.h"
 
 #include "lwip/def.h"
@@ -131,7 +131,7 @@ static void low_level_init(netif_t *netif)
     /* Do whatever else is needed to initialize interface. */
     {
         //IfxEth_Config config = cfg_Eth;
-        //memcpy(g_Eth.config.macAddress, netif->hwaddr, 6);
+        //memcpy(g_drv_eth.eth.config.macAddress, netif->hwaddr, 6);
         //IfxEth_init(eth, &config);
         //init_eth_module();
         init_eth_module(netif->hwaddr);
@@ -513,7 +513,7 @@ err_t ethernetif_tc2x_init(netif_t *netif)
     LWIP_ASSERT("netif != NULL", (netif != NULL));
     LWIP_DEBUGF(NETIF_DEBUG | LWIP_DBG_TRACE, ("ethernetif_init ( %#x)\n", netif));
 
-    ethernetif_tc2x.eth = &g_Eth;
+    ethernetif_tc2x.eth = &g_drv_eth.eth;
 
     {
 #if LWIP_NETIF_HOSTNAME
@@ -528,7 +528,7 @@ err_t ethernetif_tc2x_init(netif_t *netif)
          */
         //NETIF_INIT_SNMP(netif, snmp_ifType_ethernet_csmacd, LINK_SPEED_OF_YOUR_NETIF_IN_BPS);
 
-        netif->state   = &g_Eth;
+        netif->state   = &g_drv_eth.eth;
         netif->name[0] = IFNAME0;
         netif->name[1] = IFNAME1;
 

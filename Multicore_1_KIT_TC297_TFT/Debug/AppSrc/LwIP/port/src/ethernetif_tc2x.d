@@ -4,16 +4,16 @@
 
 ethernetif_tc2x.o :	../AppSrc/LwIP/port/src/ethernetif_tc2x.c
 ../AppSrc/LwIP/port/src/ethernetif_tc2x.c :
-ethernetif_tc2x.o :	../AppSrc/Tricore/wPub.h
-../AppSrc/Tricore/wPub.h :
-ethernetif_tc2x.o :	../AppSrc/Config/Common/Configuration.h
-../AppSrc/Config/Common/Configuration.h :
-ethernetif_tc2x.o :	../AppSrc/Config/Common/Ifx_Cfg.h
-../AppSrc/Config/Common/Ifx_Cfg.h :
-ethernetif_tc2x.o :	../AppSrc/Config/Common/ConfigurationIsr.h
-../AppSrc/Config/Common/ConfigurationIsr.h :
+ethernetif_tc2x.o :	../AppSrc/Tricore/hDrv.h
+../AppSrc/Tricore/hDrv.h :
 ethernetif_tc2x.o :	../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h
 ../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h :
+ethernetif_tc2x.o :	../Configurations/Ifx_Cfg.h
+../Configurations/Ifx_Cfg.h :
+ethernetif_tc2x.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
+../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h :
+ethernetif_tc2x.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
+../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h :
 ethernetif_tc2x.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
 ../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h :
 ethernetif_tc2x.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
@@ -54,8 +54,8 @@ ethernetif_tc2x.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 ethernetif_tc2x.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-ethernetif_tc2x.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+ethernetif_tc2x.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 ethernetif_tc2x.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h :
 ethernetif_tc2x.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/def.h

@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 netio.o :	../AppSrc/LwIP/lwip-1.4.1/apps/netio/netio.c
 ../AppSrc/LwIP/lwip-1.4.1/apps/netio/netio.c :
 netio.o :	../AppSrc/LwIP/lwip-1.4.1/apps/netio/netio.h
@@ -36,8 +16,8 @@ netio.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 netio.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-netio.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+netio.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 netio.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 netio.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

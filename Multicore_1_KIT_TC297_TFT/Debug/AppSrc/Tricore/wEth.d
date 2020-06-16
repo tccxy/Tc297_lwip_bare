@@ -4,8 +4,8 @@
 
 wEth.o :	../AppSrc/Tricore/wEth.c
 ../AppSrc/Tricore/wEth.c :
-wEth.o :	../AppSrc/Tricore/wPub.h
-../AppSrc/Tricore/wPub.h :
+wEth.o :	../AppSrc/Tricore/hPub.h
+../AppSrc/Tricore/hPub.h :
 wEth.o :	../AppSrc/Config/Common/Configuration.h
 ../AppSrc/Config/Common/Configuration.h :
 wEth.o :	../AppSrc/Config/Common/Ifx_Cfg.h

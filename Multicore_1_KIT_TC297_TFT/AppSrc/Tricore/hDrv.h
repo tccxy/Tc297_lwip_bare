@@ -24,14 +24,12 @@
  * \ingroup IfxLld_Demo_Eth
  */
 
-#ifndef _WPUB_H
-#define _WPUB_H
+#ifndef _hDRV_H
+#define _hDRV_H
 
 /******************************************************************************/
 /*----------------------------------Includes----------------------------------*/
 /******************************************************************************/
-
-#include "Configuration.h"
 #include "Bsp.h"
 #include "Cpu/Std/Ifx_Types.h"
 #include "IfxScuWdt.h"
@@ -40,6 +38,8 @@
 #include "IfxEth_Phy_Pef7071.h"
 #include "IfxEth.h"
 #include "IfxPort.h"
+#include "IfxMultican_Can.h"
+#include "IfxMultican.h"
 #include "IfxAsclin_Asc.h"
 #include "Ifx_Shell.h"
 #include "Ifx_Console.h"
@@ -55,40 +55,59 @@
 /******************************************************************************/
 /*------------------------------Type Definitions------------------------------*/
 /******************************************************************************/
-
-typedef struct
+#define ASC_TX_BUFFER_SIZE 64 /* Define the TX buffer size in byte    */
+#define ASC_RX_BUFFER_SIZE 64 /* Define the RX buffer size in byte    */
+struct drv_asc_lin_uart
 {
-    float32 sysFreq;                /**< \brief Actual SPB frequency */
-    float32 cpuFreq;                /**< \brief Actual CPU frequency */
-    float32 pllFreq;                /**< \brief Actual PLL frequency */
-    float32 stmFreq;                /**< \brief Actual STM frequency */
-} AppInfo;
+    uint8 uart_tx_buffer[ASC_TX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
+    uint8 uart_rx_buffer[ASC_RX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
 
-/** \brief Application information */
-typedef struct
+    IfxStdIf_DPipe asc_sandard_interface; /* Standard interface object            */
+    IfxAsclin_Asc asclin;                 /* ASCLIN module object                 */
+};
+
+struct drv_eth
 {
-    AppInfo info;                               /**< \brief Info object */
-} App_Cpu0;
+    IfxEth eth;
+};
 
+struct drv_multi_can
+{
+    IfxMultican_Can                 can;                   /* CAN module handle to HW module SFR set                 */
+    IfxMultican_Can_Config          can_config;             /* CAN module configuration structure                     */
+    IfxMultican_Can_Node            can_node;            /* CAN source node handle data structure                  */
+    IfxMultican_Can_NodeConfig      can_node_config;         /* CAN node configuration structure                       */
+    IfxMultican_Can_MsgObj          can_send_msgobj;          /* CAN source message object handle data structure        */
+    IfxMultican_Can_MsgObj          can_rcv_msgobj;          /* CAN destination message object handle data structure   */
+    IfxMultican_Can_MsgObjConfig    can_msg_obj_config;       /* CAN message object configuration structure             */
+    IfxMultican_Message             can_tx_msg;                 /* Transmitted CAN message structure                      */
+    IfxMultican_Message             can_rx_msg;                 /* Received CAN message structure                         */
+};
 /******************************************************************************/
 /*------------------------------Global variables------------------------------*/
 /******************************************************************************/
 
-IFX_EXTERN App_Cpu0 g_AppCpu0;
-IFX_EXTERN IfxEth g_Eth;
-IFX_EXTERN IfxStdIf_DPipe  g_ascStandardInterface;
+IFX_EXTERN struct drv_eth g_drv_eth;
+IFX_EXTERN struct drv_asc_lin_uart g_drv_asc_lin_uart;
 
-void init_uart(void);
+void init_uart_module(void);
 void Ifx_print(pchar format, ...);
 
-
 void init_led(void);
+void led_107_on(void);
+void led_107_off(void);
 void led_107_blink(void);
+void led_108_on(void);
+void led_108_off(void);
 void led_108_blink(void);
+void led_109_on(void);
+void led_109_off(void);
 void led_109_blink(void);
 
 void init_eth_module(uint8 *mac_addr);
 void set_eth_loop(void);
 void eth_demo_run(void);
 
+void init_multi_can_module(void);
+void multi_can_send_msg(void);
 #endif

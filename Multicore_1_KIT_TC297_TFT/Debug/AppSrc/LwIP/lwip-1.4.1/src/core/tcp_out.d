@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 tcp_out.o :	../AppSrc/LwIP/lwip-1.4.1/src/core/tcp_out.c
 ../AppSrc/LwIP/lwip-1.4.1/src/core/tcp_out.c :
 tcp_out.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ tcp_out.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 tcp_out.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-tcp_out.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+tcp_out.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 tcp_out.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 tcp_out.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

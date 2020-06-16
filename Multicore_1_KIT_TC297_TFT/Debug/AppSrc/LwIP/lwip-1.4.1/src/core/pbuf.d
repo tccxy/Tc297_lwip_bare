@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 pbuf.o :	../AppSrc/LwIP/lwip-1.4.1/src/core/pbuf.c
 ../AppSrc/LwIP/lwip-1.4.1/src/core/pbuf.c :
 pbuf.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ pbuf.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 pbuf.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-pbuf.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+pbuf.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 pbuf.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 pbuf.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

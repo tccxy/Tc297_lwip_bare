@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 raw.o :	../AppSrc/LwIP/lwip-1.4.1/src/core/raw.c
 ../AppSrc/LwIP/lwip-1.4.1/src/core/raw.c :
 raw.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ raw.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 raw.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-raw.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+raw.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 raw.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 raw.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

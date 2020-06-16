@@ -34,22 +34,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 IfxEbu_BFlashSpansion.o :	../Libraries/iLLD/TC29B/Tricore/Ebu/BFlashSpansion/IfxEbu_BFlashSpansion.c
 ../Libraries/iLLD/TC29B/Tricore/Ebu/BFlashSpansion/IfxEbu_BFlashSpansion.c :
 IfxEbu_BFlashSpansion.o :	../Configurations/Ifx_Cfg.h

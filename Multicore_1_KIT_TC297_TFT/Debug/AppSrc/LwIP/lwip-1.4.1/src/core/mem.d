@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 mem.o :	../AppSrc/LwIP/lwip-1.4.1/src/core/mem.c
 ../AppSrc/LwIP/lwip-1.4.1/src/core/mem.c :
 mem.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ mem.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 mem.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-mem.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+mem.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 mem.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 mem.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

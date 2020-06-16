@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 sntp.o :	../AppSrc/LwIP/lwip-1.4.1/apps/sntp/sntp.c
 ../AppSrc/LwIP/lwip-1.4.1/apps/sntp/sntp.c :
 sntp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ sntp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 sntp.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-sntp.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+sntp.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 sntp.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 sntp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

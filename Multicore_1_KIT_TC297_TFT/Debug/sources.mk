@@ -14,7 +14,8 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-AppSrc/Config/Common \
+AppSrc/Config/lwip \
+AppSrc/Drv \
 AppSrc/LwIP/lwip-1.4.1/apps/chargen \
 AppSrc/LwIP/lwip-1.4.1/apps/httpserver \
 AppSrc/LwIP/lwip-1.4.1/apps/netbios \

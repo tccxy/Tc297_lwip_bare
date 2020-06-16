@@ -1,9 +1,9 @@
 #ifndef IFX_LWIP_CC_H
 #define IFX_LWIP_CC_H
 
+#include "../../../../Config/lwip/os.h"
 #include "lwipopts.h"
 
-#include "os.h"
 
 #if LWIP_SYS == LWIP_SYS_EE
 
@@ -51,7 +51,7 @@ typedef u32_t  mem_ptr_t;
 
 #define abort()
 
-#define LWIP_DEBUG
+//#define LWIP_DEBUG
 #ifdef LWIP_DEBUG
 s8_t Ifx_Lwip_printf(const char *s, ...);
 #define LWIP_PLATFORM_ASSERT(msg)                                                           \

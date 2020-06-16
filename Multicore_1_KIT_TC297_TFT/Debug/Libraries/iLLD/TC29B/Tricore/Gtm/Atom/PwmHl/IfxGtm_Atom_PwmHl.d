@@ -34,22 +34,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 IfxGtm_Atom_PwmHl.o :	../Libraries/iLLD/TC29B/Tricore/Gtm/Atom/PwmHl/IfxGtm_Atom_PwmHl.c
 ../Libraries/iLLD/TC29B/Tricore/Gtm/Atom/PwmHl/IfxGtm_Atom_PwmHl.c :
 IfxGtm_Atom_PwmHl.o :	../Libraries/Service/CpuGeneric/StdIf/IfxStdIf_PwmHl.h

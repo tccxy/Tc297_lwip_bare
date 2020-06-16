@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 netbios.o :	../AppSrc/LwIP/lwip-1.4.1/apps/netbios/netbios.c
 ../AppSrc/LwIP/lwip-1.4.1/apps/netbios/netbios.c :
 netbios.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ netbios.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 netbios.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-netbios.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+netbios.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 netbios.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 netbios.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

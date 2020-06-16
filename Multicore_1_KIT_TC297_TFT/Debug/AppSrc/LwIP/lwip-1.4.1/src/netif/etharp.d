@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 etharp.o :	../AppSrc/LwIP/lwip-1.4.1/src/netif/etharp.c
 ../AppSrc/LwIP/lwip-1.4.1/src/netif/etharp.c :
 etharp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ etharp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 etharp.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-etharp.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+etharp.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 etharp.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 etharp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

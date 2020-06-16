@@ -191,7 +191,7 @@ void Ifx_Lwip_init(const Ifx_Lwip_Config *config)
 // DEBUGGING FUNCTIONS
 
 #include "Comm/Ifx_Console.h"
-#include "wPub.h"
+#include "hDrv.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
@@ -201,7 +201,7 @@ s8_t Ifx_Lwip_printf(const char *format, ...)
 {
     /* WNC do not have console port */
     s8_t result = -13;
-    if (!g_ascStandardInterface.txDisabled)
+    if (!(g_drv_asc_lin_uart.asc_sandard_interface.txDisabled))
     {
         char message[STDIF_DPIPE_MAX_PRINT_SIZE + 1];
         Ifx_SizeT count;
@@ -212,7 +212,7 @@ s8_t Ifx_Lwip_printf(const char *format, ...)
         count = (Ifx_SizeT)strlen(message);
         IFX_ASSERT(IFX_VERBOSE_LEVEL_ERROR, count < STDIF_DPIPE_MAX_PRINT_SIZE);
         //return
-        IfxStdIf_DPipe_write(&g_ascStandardInterface, (void *)message, &count, TIME_INFINITE);
+        IfxStdIf_DPipe_write(&g_drv_asc_lin_uart.asc_sandard_interface, (void *)message, &count, TIME_INFINITE);
     }
     else
     {

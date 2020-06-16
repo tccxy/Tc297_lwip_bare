@@ -1,15 +1,15 @@
 
-#include "wPub.h"
-#include "Interrupts_Cfg.h"
-IfxEth g_Eth; /**< \brief ETH interface */
+#include "hDrv.h"
+
+struct drv_eth g_drv_eth;
 #define HEADER_SIZE 14
 const uint8 myMacAddress[6] = {0x00, 0x11, 0x22, 0x33, 0x44, 0x55};
 
 void init_eth_module(uint8 *mac_addr)
 {
-    IfxEth_Config ethConfig;
+    IfxEth_Config eth_config;
 
-    IfxEth_initConfig(&ethConfig, &MODULE_ETH);
+    IfxEth_initConfig(&eth_config, &MODULE_ETH);
 
     /* Eth pin configuration */
     const IfxEth_RmiiPins PINS =
@@ -25,35 +25,33 @@ void init_eth_module(uint8 *mac_addr)
             .txEn = &IfxEth_TXEN_P11_6_OUT,     /* TXEN                     */
         };
 
-    ethConfig.phyInterfaceMode = IfxEth_PhyInterfaceMode_rmii;
-    ethConfig.rmiiPins = &PINS;
-    ethConfig.phyInit = &IfxEth_Phy_Pef7071_init;
-    ethConfig.phyLink = &IfxEth_Phy_Pef7071_link;
-    ethConfig.miiPins = NULL_PTR;
-    ethConfig.isrPriority = ISR_PRIORITY_ETH;
-    ethConfig.isrProvider = ISR_PROVIDER_ETH;
-    ethConfig.ethSfr = NULL_PTR;
-    ethConfig.rxDescr = &IfxEth_rxDescr;
-    ethConfig.txDescr = &IfxEth_txDescr;
-    memcpy(ethConfig.macAddress, mac_addr, 6);
+    eth_config.phyInterfaceMode = IfxEth_PhyInterfaceMode_rmii;
+    eth_config.rmiiPins = &PINS;
+    eth_config.phyInit = &IfxEth_Phy_Pef7071_init;
+    eth_config.phyLink = &IfxEth_Phy_Pef7071_link;
+    eth_config.miiPins = NULL_PTR;
+    eth_config.ethSfr = NULL_PTR;
+    eth_config.rxDescr = &IfxEth_rxDescr;
+    eth_config.txDescr = &IfxEth_txDescr;
+    memcpy(eth_config.macAddress, mac_addr, 6);
 
-    IfxEth_init(&g_Eth, &ethConfig);
+    IfxEth_init(&g_drv_eth.eth, &eth_config);
     wait(TimeConst_1s);
     wait(TimeConst_1s);
-    Ifx_print("link is %d \r\n", IfxEth_isLinkActive(&g_Eth));
+    Ifx_print("link is %d \r\n", IfxEth_isLinkActive(&g_drv_eth.eth));
 }
 
 void set_eth_loop(void)
 {
-    IfxEth_setLoopbackMode(&g_Eth, 1);
+    IfxEth_setLoopbackMode(&g_drv_eth.eth, 1);
 
     /* and enable transmitter/receiver */
-    IfxEth_startTransmitter(&g_Eth);
-    IfxEth_startReceiver(&g_Eth);
+    IfxEth_startTransmitter(&g_drv_eth.eth);
+    IfxEth_startReceiver(&g_drv_eth.eth);
 
     wait(TimeConst_1s);
     wait(TimeConst_1s);
-    Ifx_print("link is %d \r\n", IfxEth_isLinkActive(&g_Eth));
+    Ifx_print("link is %d \r\n", IfxEth_isLinkActive(&g_drv_eth.eth));
 }
 /** \brief Demo run API
  *
@@ -71,7 +69,7 @@ void eth_demo_run(void)
 
     for (packet = 0; packet < numPackets; ++packet)
     {
-        uint8 *pTxBuf = (uint8 *)IfxEth_waitTransmitBuffer(&g_Eth);
+        uint8 *pTxBuf = (uint8 *)IfxEth_waitTransmitBuffer(&g_drv_eth.eth);
 
         Ifx_print("TX #%d\r\n", packet + 1);
 
@@ -100,10 +98,10 @@ void eth_demo_run(void)
         }
 
         /* send packet */
-        IfxEth_clearTxInterrupt(&g_Eth);
-        IfxEth_sendTransmitBuffer(&g_Eth, HEADER_SIZE + packetSize);
+        IfxEth_clearTxInterrupt(&g_drv_eth.eth);
+        IfxEth_sendTransmitBuffer(&g_drv_eth.eth, HEADER_SIZE + packetSize);
 
-        while (IfxEth_isTxInterrupt(&g_Eth) == FALSE)
+        while (IfxEth_isTxInterrupt(&g_drv_eth.eth) == FALSE)
         {
         }
     }
@@ -118,20 +116,20 @@ void eth_demo_run(void)
 #if 0
 
         /* only one interrupt for all the received packets so far... */
-        while (IfxEth_isRxInterrupt(&g_Eth.drivers.eth) == FALSE)
+        while (IfxEth_isRxInterrupt(&g_drv_eth.eth.drivers.eth) == FALSE)
         {}
 
-        IfxEth_clearRxInterrupt(&g_Eth.drivers.eth);
+        IfxEth_clearRxInterrupt(&g_drv_eth.eth.drivers.eth);
 #else
 
-        if (IfxEth_isRxDataAvailable(&g_Eth) != TRUE)
+        if (IfxEth_isRxDataAvailable(&g_drv_eth.eth) != TRUE)
         {
             ++errors;
         }
 
 #endif
-        uint8 *pRxBuf = (uint8 *)IfxEth_getReceiveBuffer(&g_Eth); /* we expect that a packet is available */
-        IfxEth_freeReceiveBuffer(&g_Eth);
+        uint8 *pRxBuf = (uint8 *)IfxEth_getReceiveBuffer(&g_drv_eth.eth); /* we expect that a packet is available */
+        IfxEth_freeReceiveBuffer(&g_drv_eth.eth);
 
         /* DA */
         const uint8 packetId = 0x10 * packet;
@@ -176,7 +174,7 @@ void eth_demo_run(void)
 
     Ifx_print("Expect that no additional receive data is available:\r\n");
 
-    if (IfxEth_isRxDataAvailable(&g_Eth) != FALSE)
+    if (IfxEth_isRxDataAvailable(&g_drv_eth.eth) != FALSE)
     {
         ++errors;
     }

@@ -23,8 +23,9 @@
  * \ingroup configuration_comm
  */
 
-#include "Interrupts_Cfg.h"
 #include "Stm/Std/IfxStm.h"
+
+#include "Interrupts_cfg.h"
 //#include "CifServer/CifServer.h"
 
 

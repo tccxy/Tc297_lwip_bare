@@ -2,22 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 Ifx_Lwip.o :	../AppSrc/LwIP/port/src/Ifx_Lwip.c
 ../AppSrc/LwIP/port/src/Ifx_Lwip.c :
 Ifx_Lwip.o :	../AppSrc/Lwip/port/include/Ifx_Lwip.h
@@ -32,8 +16,8 @@ Ifx_Lwip.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 Ifx_Lwip.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-Ifx_Lwip.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+Ifx_Lwip.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 Ifx_Lwip.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 Ifx_Lwip.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -90,14 +74,14 @@ Ifx_Lwip.o :	../Libraries/Service/CpuGeneric/StdIf/IfxStdIf_DPipe.h
 ../Libraries/Service/CpuGeneric/StdIf/IfxStdIf_DPipe.h :
 Ifx_Lwip.o :	../Libraries/Service/CpuGeneric/StdIf/IfxStdIf.h
 ../Libraries/Service/CpuGeneric/StdIf/IfxStdIf.h :
-Ifx_Lwip.o :	../AppSrc/Tricore/wPub.h
-../AppSrc/Tricore/wPub.h :
-Ifx_Lwip.o :	../AppSrc/Config/Common/Configuration.h
-../AppSrc/Config/Common/Configuration.h :
-Ifx_Lwip.o :	../AppSrc/Config/Common/ConfigurationIsr.h
-../AppSrc/Config/Common/ConfigurationIsr.h :
+Ifx_Lwip.o :	../AppSrc/Tricore/hDrv.h
+../AppSrc/Tricore/hDrv.h :
 Ifx_Lwip.o :	../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h
 ../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h :
+Ifx_Lwip.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
+../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h :
+Ifx_Lwip.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
+../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h :
 Ifx_Lwip.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
 ../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h :
 Ifx_Lwip.o :	../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h

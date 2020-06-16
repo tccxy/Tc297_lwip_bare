@@ -4,16 +4,16 @@
 
 Cpu0_Main.o :	../AppSrc/Tricore/Cpu0_Main.c
 ../AppSrc/Tricore/Cpu0_Main.c :
-Cpu0_Main.o :	../AppSrc/Tricore/wPub.h
-../AppSrc/Tricore/wPub.h :
-Cpu0_Main.o :	../AppSrc/Config/Common/Configuration.h
-../AppSrc/Config/Common/Configuration.h :
-Cpu0_Main.o :	../AppSrc/Config/Common/Ifx_Cfg.h
-../AppSrc/Config/Common/Ifx_Cfg.h :
-Cpu0_Main.o :	../AppSrc/Config/Common/ConfigurationIsr.h
-../AppSrc/Config/Common/ConfigurationIsr.h :
+Cpu0_Main.o :	../AppSrc/Tricore/hDrv.h
+../AppSrc/Tricore/hDrv.h :
 Cpu0_Main.o :	../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h
 ../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h :
+Cpu0_Main.o :	../Configurations/Ifx_Cfg.h
+../Configurations/Ifx_Cfg.h :
+Cpu0_Main.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
+../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h :
+Cpu0_Main.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
+../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h :
 Cpu0_Main.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
 ../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h :
 Cpu0_Main.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
@@ -44,6 +44,10 @@ Cpu0_Main.o :	../Libraries/Service/CpuGeneric/SysSe/Bsp/Assert.h
 ../Libraries/Service/CpuGeneric/SysSe/Bsp/Assert.h :
 Cpu0_Main.o :	../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h
 ../Libraries/Service/CpuGeneric/_Utilities/Ifx_Assert.h :
+Cpu0_Main.o :	../AppSrc/Tricore/Pub.h
+../AppSrc/Tricore/Pub.h :
+Cpu0_Main.o :	../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h
+../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h :
 Cpu0_Main.o :	../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h
 ../Libraries/Service/CpuGeneric/SysSe/Bsp/Bsp.h :
 Cpu0_Main.o :	../AppSrc/Lwip/port/include/Ifx_Lwip.h
@@ -58,8 +62,8 @@ Cpu0_Main.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 Cpu0_Main.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-Cpu0_Main.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+Cpu0_Main.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 Cpu0_Main.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h :
 Cpu0_Main.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/def.h

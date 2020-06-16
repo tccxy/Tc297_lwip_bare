@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 tcp.o :	../AppSrc/LwIP/lwip-1.4.1/src/core/tcp.c
 ../AppSrc/LwIP/lwip-1.4.1/src/core/tcp.c :
 tcp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ tcp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 tcp.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-tcp.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+tcp.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 tcp.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 tcp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

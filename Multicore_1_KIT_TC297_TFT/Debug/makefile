@@ -123,7 +123,8 @@ RM := rm -rf
 -include AppSrc/LwIP/lwip-1.4.1/apps/netbios/subdir.mk
 -include AppSrc/LwIP/lwip-1.4.1/apps/httpserver/subdir.mk
 -include AppSrc/LwIP/lwip-1.4.1/apps/chargen/subdir.mk
--include AppSrc/Config/Common/subdir.mk
+-include AppSrc/Drv/subdir.mk
+-include AppSrc/Config/lwip/subdir.mk
 -include subdir.mk
 -include objects.mk
 

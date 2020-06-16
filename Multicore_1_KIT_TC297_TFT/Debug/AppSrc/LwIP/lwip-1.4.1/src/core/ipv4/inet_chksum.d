@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 inet_chksum.o :	../AppSrc/LwIP/lwip-1.4.1/src/core/ipv4/inet_chksum.c
 ../AppSrc/LwIP/lwip-1.4.1/src/core/ipv4/inet_chksum.c :
 inet_chksum.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ inet_chksum.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 inet_chksum.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-inet_chksum.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+inet_chksum.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 inet_chksum.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 inet_chksum.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

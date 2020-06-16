@@ -25,7 +25,7 @@
 /*----------------------------------Includes----------------------------------*/
 /******************************************************************************/
 
-#include "wPub.h"
+#include "hDrv.h"
 
 extern IfxCpu_syncEvent g_cpuSyncEvent;
 
@@ -43,9 +43,11 @@ void core1_main(void)
     IfxCpu_emitEvent(&g_cpuSyncEvent);
     IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
 
-    /** - Background loop */
-    while (TRUE)
+    init_multi_can_module();
+
+    while (1)
     {
-        led_108_blink();
+        multi_can_send_msg();
+        wait(TimeConst_100ms);
     }
 }

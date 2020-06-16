@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 echo.o :	../AppSrc/LwIP/lwip-1.4.1/apps/tcpecho_raw/echo.c
 ../AppSrc/LwIP/lwip-1.4.1/apps/tcpecho_raw/echo.c :
 echo.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ echo.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 echo.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-echo.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+echo.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 echo.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 echo.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h

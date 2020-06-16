@@ -28,19 +28,18 @@
 /*********************************************************************************************************************/
 /*-----------------------------------------------------Includes------------------------------------------------------*/
 /*********************************************************************************************************************/
-#include "wPub.h"
+#include "hDrv.h"
 
 /*********************************************************************************************************************/
 /*------------------------------------------------------Macros-------------------------------------------------------*/
 /*********************************************************************************************************************/
-#define LED1                        &MODULE_P13,0                           /* LED D107                             */
-#define LED2                        &MODULE_P13,1                           /* LED D108                             */
-#define LED3                        &MODULE_P13,2                           /* LED D109                             */
-#define LED4                        &MODULE_P13,3                           /* LED D110                             */
+#define LED1 &MODULE_P13, 0 /* LED D107                             */
+#define LED2 &MODULE_P13, 1 /* LED D108                             */
+#define LED3 &MODULE_P13, 2 /* LED D109                             */
+#define LED4 &MODULE_P13, 3 /* LED D110                             */
 /*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
 /*********************************************************************************************************************/
-uint16 g_turnLEDon = FALSE;     /* Variable for the LED, CPU0 and CPU1 are toggling the LED depending on its state  */
 
 /*********************************************************************************************************************/
 /*---------------------------------------------Function Implementations----------------------------------------------*/
@@ -64,70 +63,97 @@ void init_led(void)
     //initTime();
 }
 
-
-
 #define TEST_COUNT 300000000
 uint16 flag1 = 1;
 uint16 flag2 = 1;
 uint16 flag3 = 1;
+
+void led_107_on(void)
+{
+    IfxPort_setPinLow(LED1);
+}
+
+void led_107_off(void)
+{
+    IfxPort_setPinHigh(LED1);
+}
+
 void led_107_blink(void)
 {
     int i = TEST_COUNT;
 
-
-    if(flag1 == 0)
+    if (flag1 == 0)
     {
-        IfxPort_setPinHigh(LED1);    /* Turn off the LED (LED is low-level active)   */
-        flag1=1;
+        IfxPort_setPinHigh(LED1); /* Turn off the LED (LED is low-level active)   */
+        flag1 = 1;
     }
     else
     {
         IfxPort_setPinLow(LED1);
-        flag1=0;
+        flag1 = 0;
     }
-    while(i--);
+    while (i--)
+        ;
     i = TEST_COUNT;
     //wait(TimeConst_1s);
 }
+
+void led_108_on(void)
+{
+    IfxPort_setPinLow(LED2);
+}
+
+void led_108_off(void)
+{
+    IfxPort_setPinHigh(LED2);
+}
+
 void led_108_blink(void)
 {
     int j = TEST_COUNT;
 
-    if(flag2 == 0)
+    if (flag2 == 0)
     {
-        IfxPort_setPinHigh(LED2);    /* Turn off the LED (LED is low-level active)   */
-        flag2=1;
+        IfxPort_setPinHigh(LED2); /* Turn off the LED (LED is low-level active)   */
+        flag2 = 1;
     }
     else
     {
         IfxPort_setPinLow(LED2);
-        flag2=0;
+        flag2 = 0;
     }
-    while(j--);
-    j=TEST_COUNT;
-    while(j--);
-    j=TEST_COUNT;
+    while (j--)
+        ;
+    j = TEST_COUNT;
+    while (j--)
+        ;
+    j = TEST_COUNT;
 }
+
+void led_109_on(void)
+{
+    IfxPort_setPinLow(LED3);
+}
+
+void led_109_off(void)
+{
+    IfxPort_setPinHigh(LED3);
+}
+
 void led_109_blink(void)
 {
-    int k =TEST_COUNT;
+    int k = TEST_COUNT/3;
 
-    if(flag3 == 0)
+    if (flag3 == 0)
     {
-        IfxPort_setPinHigh(LED3);    /* Turn off the LED (LED is low-level active)   */
-        flag3=1;
+        IfxPort_setPinHigh(LED3); /* Turn off the LED (LED is low-level active)   */
+        flag3 = 1;
     }
     else
     {
         IfxPort_setPinLow(LED3);
-        flag3=0;
+        flag3 = 0;
     }
-    while(k--);
-    k=TEST_COUNT;
-    while(k--);
-    k=TEST_COUNT;
-    while(k--);
-    k=TEST_COUNT;
-    while(k--);
-    k=TEST_COUNT;
+    while (k--);
+    k = TEST_COUNT;
 }

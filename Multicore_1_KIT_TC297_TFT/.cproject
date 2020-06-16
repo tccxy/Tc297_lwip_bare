@@ -338,8 +338,6 @@
                                     <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/AppSrc/Lwip/port/include&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/AppSrc/Tricore&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/AppSrc/Lwip/lwip-1.4.1/apps/httpserver_raw&quot;"/>
                                     								
                                 </option>
                                 								

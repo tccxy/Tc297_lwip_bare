@@ -25,13 +25,13 @@
 /*----------------------------------Includes----------------------------------*/
 /******************************************************************************/
 
-#include "wPub.h"
+#include "hDrv.h"
+#include "Pub.h"
 #include "SysSe/Bsp/Bsp.h"
 #include "Ifx_Lwip.h"
 #include "IfxPort_PinMap.h"
 #include "IfxPort_Io.h"
 #include "IfxPort_cfg.h"
-
 /******************************************************************************/
 /*------------------------Inline Function Prototypes--------------------------*/
 /******************************************************************************/
@@ -47,7 +47,6 @@
 /******************************************************************************/
 /*------------------------------Global variables------------------------------*/
 /******************************************************************************/
-App_Cpu0 g_AppCpu0; /**< \brief CPU 0 global data */
 #define UDP_SERVER_PORT 8080
 /******************************************************************************/
 /*-------------------------Function Implementations---------------------------*/
@@ -59,7 +58,8 @@ App_Cpu0 g_AppCpu0; /**< \brief CPU 0 global data */
  */
 volatile void *ethRam;
 IfxCpu_syncEvent g_cpuSyncEvent = 0;
-char data[10] = {0x01};
+
+struct test_data g_test_data = {0};
 
 int core0_main(void)
 {
@@ -86,9 +86,9 @@ int core0_main(void)
 
     initTime();
 
-    init_uart();
+    init_uart_module();
 
-    Ifx_print("hello \r\n");
+    Ifx_print("hello core 0\r\n");
 
     //init_eth_module();
 
@@ -112,39 +112,37 @@ int core0_main(void)
 
     err = udp_connect(udp, &dest_addr, UDP_SERVER_PORT);
 
-
     if (err == ERR_OK)
     {
         while (TRUE)
         {
-            if (g_Eth.config.phyLink())
+            //if (g_drv_eth.eth.config.phyLink() && (ethRam = IfxEth_getTransmitBuffer(&g_drv_eth.eth)))
+            if (g_drv_eth.eth.config.phyLink())
             {
                 Ifx_Lwip_pollTimerFlags();
                 Ifx_Lwip_pollReceiveFlags();
                 netif_set_up(&Ifx_g_Lwip.netif);
-                IfxEth_startTransmitter(Ifx_g_Lwip.netif.state);
-            }
-            //Ifx_print("report.mdio_stat %d test 1\r\n", report.mdio_stat);
-            wait(TimeConst_10ms);
-            //wait(TimeConst_1s);
 
-            //if (g_Eth.config.phyLink() && (ethRam = IfxEth_getTransmitBuffer(&g_Eth)))
-            if (g_Eth.config.phyLink())
-            {
-                ppkt_buf = pbuf_alloc(PBUF_TRANSPORT, 10, PBUF_POOL);
+                ppkt_buf = pbuf_alloc(PBUF_TRANSPORT, sizeof(IfxMultican_Message), PBUF_POOL);
                 if (ppkt_buf != NULL)
                 {
-                    Ifx_print("send -- %d- msg\r\n", i++);
-                    memcpy(ppkt_buf->payload, data, 10);
+                    while (1)
+                    {
+                        if (g_test_data.sync_single == 1)
+                            break;
+                        wait(TimeConst_100us);
+                    }
+                    //Ifx_print("send -- %d- msg\r\n", i++);
+                    memcpy(ppkt_buf->payload, (char *)&g_test_data.msg, sizeof(IfxMultican_Message));
                     udp_sendto(udp, ppkt_buf, &dest_addr, UDP_SERVER_PORT);
                     //System_Periodic_Handle();
                     pbuf_free(ppkt_buf);
+                    g_test_data.sync_single = 0;
                 }
             }
             else
             {
             }
-            //REGRESSION_RUN_STOP_PASS;
         }
     }
     udp_remove(udp);

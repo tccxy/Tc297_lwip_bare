@@ -2,26 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
-################################################################################
-# Automatically-generated file. Do not edit!
-################################################################################
-
 smtp.o :	../AppSrc/LwIP/lwip-1.4.1/apps/smtp/smtp.c
 ../AppSrc/LwIP/lwip-1.4.1/apps/smtp/smtp.c :
 smtp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
@@ -34,8 +14,8 @@ smtp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h
 ../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/arch.h :
 smtp.o :	../AppSrc/Lwip/port/include/arch/cc.h
 ../AppSrc/Lwip/port/include/arch/cc.h :
-smtp.o :	../AppSrc/Config/Common/os.h
-../AppSrc/Config/Common/os.h :
+smtp.o :	../AppSrc/Config/lwip/os.h
+../AppSrc/Config/lwip/os.h :
 smtp.o :	../Configurations/Ifx_Cfg.h
 ../Configurations/Ifx_Cfg.h :
 smtp.o :	../AppSrc/Lwip/lwip-1.4.1/src/include/lwip/opt.h
