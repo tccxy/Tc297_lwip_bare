@@ -8,14 +8,15 @@
 #include "IfxMultican.h"
 #include "string.h"
 
-struct test_data
-{
-    char sync_single;
-    IfxMultican_Message msg;
-};
-
-IFX_EXTERN struct test_data g_test_data;
-
-
+void init_led(void);
+void led_107_on(void);
+void led_107_off(void);
+void led_107_blink(void);
+void led_108_on(void);
+void led_108_off(void);
+void led_108_blink(void);
+void led_109_on(void);
+void led_109_off(void);
+void led_109_blink(void);
 
 #endif

@@ -47,7 +47,7 @@
 #include "IfxStdIf_DPipe.h"
 #include "_Utilities/Ifx_Assert.h"
 #include "Assert.h"
-
+#include "sys_arch.h"
 /******************************************************************************/
 /*-----------------------------------Macros-----------------------------------*/
 /******************************************************************************/
@@ -55,6 +55,11 @@
 /******************************************************************************/
 /*------------------------------Type Definitions------------------------------*/
 /******************************************************************************/
+#define LED1 &MODULE_P13, 0 /* LED D107                             */
+#define LED2 &MODULE_P13, 1 /* LED D108                             */
+#define LED3 &MODULE_P13, 2 /* LED D109                             */
+#define LED4 &MODULE_P13, 3 /* LED D110                             */
+
 #define ASC_TX_BUFFER_SIZE 64 /* Define the TX buffer size in byte    */
 #define ASC_RX_BUFFER_SIZE 64 /* Define the RX buffer size in byte    */
 struct drv_asc_lin_uart
@@ -89,7 +94,8 @@ struct drv_multi_can
 
 IFX_EXTERN struct drv_eth g_drv_eth;
 IFX_EXTERN struct drv_asc_lin_uart g_drv_asc_lin_uart;
-
+//IFX_EXTERN SemaphoreHandle_t s_xSemaphore;
+IFX_EXTERN int ddddd_flag;
 void init_uart_module(void);
 void Ifx_print(pchar format, ...);
 

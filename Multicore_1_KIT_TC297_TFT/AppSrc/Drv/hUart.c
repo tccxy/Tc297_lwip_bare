@@ -123,6 +123,7 @@ void init_uart_module(void)
     Ifx_Assert_setStandardIo(&g_drv_asc_lin_uart.asc_sandard_interface);
 }
 
+#if 1
 void Ifx_print(pchar format, ...)
 {
     if (!g_drv_asc_lin_uart.asc_sandard_interface.txDisabled)
@@ -143,3 +144,8 @@ void Ifx_print(pchar format, ...)
         //return TRUE;
     }
 }
+#else
+void Ifx_print(pchar format, ...)
+{
+}
+#endif

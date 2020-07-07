@@ -53,11 +53,13 @@ void canIsrRxHandler(void)
         {
         }
     }
+#if 0
     if (g_test_data.sync_single == 0)
     {
         memcpy((char *)&g_test_data.msg, (char *)&g_drv_multi_can.can_rx_msg, sizeof(IfxMultican_Message));
         g_test_data.sync_single = 1;
     }
+#endif
     flag++;
 
     if (flag == 100)

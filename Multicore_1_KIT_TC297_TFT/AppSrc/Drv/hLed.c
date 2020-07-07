@@ -92,9 +92,11 @@ void led_107_blink(void)
         IfxPort_setPinLow(LED1);
         flag1 = 0;
     }
+    #if 1
     while (i--)
         ;
     i = TEST_COUNT;
+    #endif
     //wait(TimeConst_1s);
 }
 

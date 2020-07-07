@@ -33,6 +33,7 @@ void init_eth_module(uint8 *mac_addr)
     eth_config.ethSfr = NULL_PTR;
     eth_config.rxDescr = &IfxEth_rxDescr;
     eth_config.txDescr = &IfxEth_txDescr;
+    eth_config.isrPriority = 3;
     memcpy(eth_config.macAddress, mac_addr, 6);
 
     IfxEth_init(&g_drv_eth.eth, &eth_config);
